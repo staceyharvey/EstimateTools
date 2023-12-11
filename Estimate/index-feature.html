@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/icon-feature.svg">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style-feature.css">
+    <title>Feature Sizing</title>
+    <script src="./script.js" defer></script>
+    <script src="./script-feature.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo" onclick="goToHome();">
+        </div>
+        <h1>Feature Size Calculator</h1>
+    </header>
+    <main class="main_feature">
+        <section class="control">
+            <h2>Requirements</h2>
+            <div>
+                <div class="label">
+                    <h3>Complexity</h3>
+                    <span>Heart surgery vs stamping 1000 envelopes.</span>
+                </div>
+                <input id="complexity-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('complexity-output').innerHTML = this.value">
+                <output id="complexity-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Uncertainty</h3>
+                    <span>Are the requirements likely to change?</span>
+                </div>
+                <input id="uncertainty-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('uncertainty-output').innerHTML = this.value">
+                <output id="uncertainty-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Security</h3>
+                    <span>Any special security requirements?</span>
+                </div>
+                <input id="security-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('security-output').innerHTML = this.value">
+                <output id="security-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Controls</h3>
+                    <span>External controls such as SSO, 2AF?</span>
+                </div>
+                <input id="controls-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('controls-output').innerHTML = this.value">
+                <output id="controls-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+        </section>
+        <section class="control">
+            <h2>Development</h2>
+            <div>
+                <div class="label">
+                    <h3>Unfamiliarity</h3>
+                    <span>Is the technology well known?</span>
+                </div>
+                <input id="unfamiliarity-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('unfamiliarity-output').innerHTML = this.value">
+                <output id="unfamiliarity-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Dependencies</h3>
+                    <span>External party work required?</span>
+                </div>
+                <input id="dependencies-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('dependencies-output').innerHTML = this.value">
+                <output id="dependencies-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Performance</h3>
+                    <span>Internal, External, Microservices and APIs.</span>
+                </div>
+                <input id="performance-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('performance-output').innerHTML = this.value">
+                <output id="performance-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Infrastructure</h3>
+                    <span>Building and releasing. Environments.</span>
+                </div>
+                <input id="infrastructure-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('infrastructure-output').innerHTML = this.value">
+                <output id="infrastructure-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+        </section>
+        <section class="control">
+            <h2>Testing</h2>
+            <div>
+                <div class="label">
+                    <h3>Manual</h3>
+                    <span>Do you have a lot of data to prepare?</span>
+                </div>
+                <input id="manual-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('manual-output').innerHTML = this.value">
+                <output id="manual-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Access</h3>
+                    <span>Access to external applications?</span>
+                </div>
+                <input id="access-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('access-output').innerHTML = this.value">
+                <output id="access-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Performance</h3>
+                    <span>Performace tests required?</span>
+                </div>
+                <input id="perf-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('perf-output').innerHTML = this.value">
+                <output id="perf-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+            <div>
+                <div class="label">
+                    <h3>Automation</h3>
+                    <span>Automation <tbody></tbody>ests required?</span>
+                </div>
+                <input id="automation-slider" class="slider" type="range" value="0" min="0" max="4" step="1" oninput="document.getElementById('automation-output').innerHTML = this.value">
+                <output id="automation-output">0</output>
+                <div class="levels">
+                    <p>0</p>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <button onclick="calculateSize();">Calculate</button>
+        <section id="responsiveBox" class="responsiveBox"></section>
+        <section id="tshirts" class="tshirts">
+            <div id="shirt-green">
+                <img id="img-green" src="./images/Shirts/empty-green.svg">
+                <p id="xs">XS</p>
+            </div>
+            <div id="shirt-blue">
+                <img id="img-blue" src="./images/Shirts/empty-blue.svg">
+                <p id="s">S</p>
+            </div>
+            <div id="shirt-yellow">
+                <img id="img-yellow" src="./images/Shirts/empty-yellow.svg">
+                <p id="m">M</p>
+            </div>
+            <div id="shirt-orange">
+                <img id="img-orange" src="./images/Shirts/empty-orange.svg">
+                <p id="l">L</p>
+            </div>
+            <div id="shirt-red">
+                <img id="img-red" src="./images/Shirts/empty-red.svg">
+                <p id="xl">XL</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

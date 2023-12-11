@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/icon-story.svg">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style-story.css">
+    <title>Story Points</title>
+    <script src="./script.js" defer></script>
+    <script src="./script-story.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo" onclick="goToHome();">
+        </div>
+        <h1>Story Point Calculator</h1>
+    </header>
+    <main class="main_story">
+        <section class="column">
+            <section class="control">
+                <h2>Complexity</h2>
+                <div>
+                    <input id="complexity-slider" class="slider" type="range" value="0" min="0" max="3" step="1" oninput="document.getElementById('complexity-output').innerHTML = this.value">
+                    <output id="complexity-output">0</output>
+                    <div class="levels">
+                        <p>None</p>
+                        <p>Low</p>
+                        <p>Med</p>
+                        <p>High</p>
+                    </div>
+                </div>
+            </section>
+            <section class="detail">
+                <p>The complexity for a particular user-story includes:</p>
+                <ul>
+                    <li>Risk to other areas of the code</li>
+                    <li>Dependence on a third party </li>
+                    <li>Requirement changes</li>
+                </ul>
+            </section>
+        </section>
+        <section class="column">
+            <section class="control">
+                <h2>Uncertainty</h2>
+                <div>
+                    <input id="uncertainty-slider" class="slider" type="range" value="0" min="0" max="3" step="1" oninput="document.getElementById('uncertainty-output').innerHTML = this.value">
+                    <output id="uncertainty-output">0</output>
+                    <div class="levels">
+                        <p>None</p>
+                        <p>Low</p>
+                        <p>Med</p>
+                        <p>High</p>
+                    </div>
+                </div>
+            </section>
+            <section class="detail">
+                <p>The uncertainty for a particular user-story includes:</p>
+                <ul>
+                    <li>How familiar you are with the feature</li>
+                    <li>How familiar you are with the area of code</li>
+                    <li>Your access to any third-party systems</li>
+                </ul>
+            </section>
+        </section>
+        <section class="column">
+            <section class="control">
+                <h2>Repetition</h2>
+                <div>
+                    <input id="repetition-slider" class="slider" type="range" value="0" min="0" max="3" step="1" oninput="document.getElementById('repetition-output').innerHTML = this.value">
+                    <output id="repetition-output">0</output>
+                    <div class="levels">
+                        <p>None</p>
+                        <p>Low</p>
+                        <p>Med</p>
+                        <p>High</p>
+                    </div>
+                </div>
+            </section>
+            <section class="detail">
+                <p>The repetition for a particular user-story includes:</p>
+                <ul>
+                    <li>The number of tasks within development</li>
+                    <li>The number of repos effected</li>
+                    <li>The amount of data prep for testing</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <section id="fibonacci">
+            <div id="sp3">
+                <span>3</span>
+            </div>
+            <div id="sp2">
+                <span>2</span>
+            </div>
+            <div id="sp8">
+                <span>8</span>
+            </div>
+            <div id="sp">
+                <span>SP</span>
+            </div>
+            <div id="sp1">
+                <span>1</span>
+            </div>
+            <div id="sp5">
+                <span>5</span>
+            </div>
+        </section>
+        <button onclick="calculateSP();">Calculate</button>
+        <section id="messageBox" class="message">Calculate SP</section>
+    </footer>
+</body>
+
+</html>

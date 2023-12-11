@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/icon-tool.svg">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Estimate Tools</title>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo" onclick="goToHome();">
+        </div>
+        <h1>Estimate Tools</h1>
+    </header>
+    <main class="home">
+        <section class="tile" id="feature_tile" onclick="goToFeature();">
+            <div class="wit">
+                <img src="./images/feature.svg">
+            </div>
+            <div class="tool_type">
+                <h2>Feature Sizing</h2>
+                <p>Estimate Features using the T-shirt sizing scale</p>
+            </div>
+        </section>
+        <section class="tile" id="story_tile" onclick="goToStory();">
+            <div class="wit">
+                <img src="./images/story.svg">
+            </div>
+            <div class="tool_type">
+                <h2>Story Sizing</h2>
+                <p>Estimate User Stories using the fibonacci scale</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

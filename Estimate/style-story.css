@@ -1,0 +1,250 @@
+/* Main Home */
+
+:root {
+    --red: #D3414B;
+    --orange: #D37F1F;
+    --yellow: #EFCE32;
+    --green: #71AA40;
+    --blue: #A5D1E6;
+    --navy: #213C4C;
+    --concrete: #898B8E;
+    --light: #DEDEDE;
+}
+
+
+/* Main Story */
+
+.main_story {
+    width: 100%;
+    height: 63vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem;
+}
+
+.column {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: var(--navy);
+}
+
+.column>section {
+    width: 100%;
+    height: 20rem;
+    background-color: var(--yellow);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.control>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.slider {
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 2%;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--concrete);
+    border-radius: 10rem;
+    cursor: grab;
+}
+
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: var(--navy);
+    width: 4rem;
+    height: 4rem;
+    border: #fff solid .5rem;
+    border-radius: 50%;
+    cursor: -webkit-grab;
+}
+
+.green::-webkit-slider-thumb {
+    background-color: var(--green);
+}
+
+.amber::-webkit-slider-thumb {
+    background-color: var(--orange);
+}
+
+.red::-webkit-slider-thumb {
+    background-color: var(--red);
+}
+
+input[type="range"].green {
+    background: linear-gradient(90deg, var(--green) 0%, var(--green) 33%, var(--concrete) 33%, var(--concrete) 100%);
+}
+
+input[type="range"].amber {
+    background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 66%, var(--concrete) 66%, var(--concrete) 100%);
+}
+
+input[type="range"].red {
+    background: linear-gradient(90deg, var(--red) 0%, var(--red) 100%);
+}
+
+.detail>p {
+    font-size: 2rem;
+}
+
+footer>section {
+    width: 32.5rem;
+    height: 20rem;
+}
+
+.footer>#fibonacci>.highlight {
+    background-color: var(--green);
+}
+
+.footer>#fibonacci>.highlight>span {
+    color: #fff;
+}
+
+#fibonacci {
+    display: grid;
+    grid-template-columns: repeat(13, 2.5rem);
+    grid-template-rows: repeat(8, 2.5rem);
+}
+
+#fibonacci>div {
+    border: #fff solid .1rem;
+    background-color: var(--light);
+    line-height: 100%;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    color: var(--concrete);
+    text-align: center;
+}
+
+#sp>span,
+#sp1>span {
+    font-size: 1rem;
+}
+
+#sp2>span {
+    font-size: 2rem;
+}
+
+#sp3>span {
+    font-size: 3rem;
+}
+
+#sp5>span {
+    font-size: 5rem;
+}
+
+#sp8>span {
+    font-size: 8rem;
+}
+
+#fibonacci>#sp3 {
+    grid-column: 1/4;
+    grid-row: 1/4;
+    border-top-left-radius: 100%;
+}
+
+#fibonacci>#sp2 {
+    grid-column: 4/6;
+    grid-row: 1/3;
+    border-top-right-radius: 100%;
+}
+
+#fibonacci>#sp8 {
+    grid-column: 6/14;
+    grid-row: 1/9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 100%;
+}
+
+#fibonacci>#sp {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    border-bottom-left-radius: 100%;
+}
+
+#fibonacci>#sp1 {
+    grid-column: 5/6;
+    grid-row: 3/4;
+    border-bottom-right-radius: 100%;
+}
+
+#fibonacci>#sp5 {
+    grid-column: 1/6;
+    grid-row: 4/9;
+    border-bottom-left-radius: 100%;
+}
+
+.message {
+    border: #fff solid .3rem;
+    border-radius: 2rem;
+    line-height: 20rem;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    background-color: var(--light);
+    color: var(--green);
+}
+
+.bad {
+    color: var(--red);
+}
+
+@media only screen and (max-width: 1350px) {
+    .column>.detail>* {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+    .column>.detail>* {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .column>.detail>* {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .detail {
+        display: none;
+    }
+    .main_story {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .column {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #fibonacci {
+        display: none;
+    }
+}
