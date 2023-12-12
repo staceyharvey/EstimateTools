@@ -87,6 +87,8 @@ function sliderFunction(a, b) {
         this.className = "slider blue";
     } else if (x == 3) {
         this.className = "slider amber"
+    } else if (x == 4) {
+        this.className = "slider orange";
     } else {
         this.className = "slider red";
     }
@@ -136,19 +138,19 @@ function calculateSize() {
     let result = complexityValue + uncertaintyValue + securityValue + controlsValue + unfamiliarityValue + dependenciesValue + performanceValue + infrastructureValue + manualValue + accessValue + perfValue + automationValue;
     if (result == 0) {
         clear();
-    } else if (result > 0 && result < 7) {
+    } else if (result > 0 && result < 8) {
         greenShirt.src = './images/Shirts/green.svg';
         xs.style.opacity = '1';
         responsiveBox.innerHTML = 'XS';
-    } else if (result <= 14) {
+    } else if (result <= 16) {
         blueShirt.src = './images/Shirts/blue.svg';
         s.style.opacity = '1';
         responsiveBox.innerHTML = 'S';
-    } else if (result <= 21) {
+    } else if (result <= 24) {
         yellowShirt.src = './images/Shirts/yellow.svg';
         m.style.opacity = '1';
         responsiveBox.innerHTML = 'M';
-    } else if (result <= 28) {
+    } else if (result <= 32) {
         orangeShirt.src = './images/Shirts/orange.svg';
         l.style.opacity = '1';
         responsiveBox.innerHTML = 'L';
