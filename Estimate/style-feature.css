@@ -2,6 +2,7 @@
     --red: #D3414B;
     --orange: #D37F1F;
     --yellow: #EFCE32;
+    --amber: #E6B012;
     --green: #71AA40;
     --blue: #A5D1E6;
     --navy: #213C4C;
@@ -87,6 +88,10 @@ h3 {
 }
 
 .amber::-webkit-slider-thumb {
+    background-color: var(--amber);
+}
+
+.orange::-webkit-slider-thumb {
     background-color: var(--orange);
 }
 
@@ -95,15 +100,19 @@ h3 {
 }
 
 input[type="range"].green {
-    background: linear-gradient(90deg, var(--green) 0%, var(--green) 25%, var(--concrete) 25%, var(--concrete) 100%);
+    background: linear-gradient(90deg, var(--green) 0%, var(--green) 20%, var(--concrete) 20%, var(--concrete) 100%);
 }
 
 input[type="range"].blue {
-    background: linear-gradient(90deg, var(--blue) 0%, var(--blue) 50%, var(--concrete) 50%, var(--concrete) 100%);
+    background: linear-gradient(90deg, var(--blue) 0%, var(--blue) 40%, var(--concrete) 40%, var(--concrete) 100%);
 }
 
 input[type="range"].amber {
-    background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 75%, var(--concrete) 75%, var(--concrete) 100%);
+    background: linear-gradient(90deg, var(--amber) 0%, var(--amber) 60%, var(--concrete) 60%, var(--concrete) 100%);
+}
+
+input[type="range"].orange {
+    background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 80%, var(--concrete) 80%, var(--concrete) 100%);
 }
 
 input[type="range"].red {
