@@ -48,7 +48,7 @@ function sliderFunction(a, b) {
     if (b == 'com') {
         complexityValue = x * 1.5
     } else if (b == 'unc') {
-        uncertaintyValue = x * 3
+        uncertaintyValue = x * 2
     } else {
         repetitionValue = x * 1
     }
@@ -85,7 +85,7 @@ function calculateSP() {
         sp = 5;
         message = "5 Story Points";
         sp5.className = "highlight";
-    } else if (result < 9) {
+    } else if (result <= 8) {
         sp = 8;
         message = "8 Story Points";
         sp8.className = "highlight";
