@@ -24,6 +24,11 @@ body {
     width: 100%;
 }
 
+sup {
+    font-weight: 500;
+    font-size: 75%;
+}
+
 header {
     position: relative;
     width: 100vw;
