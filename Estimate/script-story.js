@@ -90,8 +90,8 @@ function calculateSP() {
         message = "8 Story Points";
         sp8.className = "highlight";
     } else {
-        sp = 100;
-        message = "Break it Down"
+        sp = 13;
+        message = "13 Story Points"
         messageBox.classList.add('bad');
     }
     messageBox.innerHTML = message;
